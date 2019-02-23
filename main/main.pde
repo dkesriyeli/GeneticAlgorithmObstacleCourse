@@ -1,7 +1,7 @@
 Population pop;
 PVector goal  = new PVector(400, 15);
 int frameR = 100;
-int numObstacles = 4; //change this to create wanted amount of obstacles
+int numObstacles = 10; //change this to create wanted amount of obstacles
 ArrayList<Obstacle> obstacles = new ArrayList<Obstacle>();
 Util util = new Util();
 
@@ -36,6 +36,9 @@ void draw() {
 void createObstacles() {
   for (int i=0; i< numObstacles; i++) {
     Obstacle obs = new Obstacle();
+    while (obs.isOverlapping(obstacles)) {
+      obs = new Obstacle();
+    }
     pop.addObstacle(obs);
     obstacles.add(obs);
   }

@@ -18,4 +18,15 @@ class Obstacle {
     fill(col);
     rect(x, y, width, height);
   }
+
+  boolean isOverlapping(Obstacle other) {
+    return !(other.x > x + width || other.y + other.height <= y || x > other.x + other.width || y + height <= other.y);
+  }
+
+  boolean isOverlapping(ArrayList<Obstacle> others) {
+    for (Obstacle o : others) {
+      if (this.isOverlapping(o)) return true;
+    }
+    return false;
+  }
 }
