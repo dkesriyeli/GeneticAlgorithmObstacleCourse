@@ -17,7 +17,6 @@ class Button {
   
   void show() {
     fill(c);
-    //stroke(141);
     rect(x, y, w, h, 10);
     textAlign(CENTER, CENTER);
     fill(0);
