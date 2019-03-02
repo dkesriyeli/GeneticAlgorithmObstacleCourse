@@ -8,9 +8,9 @@ class Obstacle {
 
 
   Obstacle() {
-    x = random(0, 100);
+    x = random(50, 200);
     y = random(100, 700);
-    width = random(300, 750 - x);
+    width = random(400, 750 - x);
     height = 10;
   }
 

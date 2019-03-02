@@ -5,7 +5,7 @@ class Button {
   float w;    
   float h;
   color c;
-  
+
   Button(String label, float x, float y, float w, float h, color c) {
     this.label = label;
     this.x = x;
@@ -14,7 +14,7 @@ class Button {
     this.h = h;
     this.c = c;
   }
-  
+
   void show() {
     fill(c);
     rect(x, y, w, h, 10);
@@ -22,7 +22,7 @@ class Button {
     fill(0);
     text(label, x + (w / 2), y + (h / 2));
   }
-  
+
   boolean mouseIsOver() {
     if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
       return true;

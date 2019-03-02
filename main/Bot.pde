@@ -12,7 +12,7 @@ class Bot {
 
   Bot() {
     movement = new Movement(1000);
-    pos = new PVector(800/2, 800-5);
+    pos = new PVector(850/2, 850-10);
     vel = new PVector(0, 0);
     acc = new PVector(0, 0);
   }
@@ -21,10 +21,10 @@ class Bot {
   void show() { 
     if (isBest) {
       fill(#ff0000);
-      ellipse(pos.x, pos.y, 12, 12);
+      ellipse(pos.x, pos.y, 10, 10);
     } else {
       fill(0);
-      ellipse(pos.x, pos.y, 4, 4);
+      ellipse(pos.x, pos.y, 5, 5);
     }
   }
 
@@ -65,7 +65,7 @@ class Bot {
   }
 
   boolean nearEdge() {
-    return pos.x< 0|| pos.y<0 || pos.x>800 - 4 || pos.y>800 -4;
+    return pos.x< 50 + 8|| pos.y<50 + 8 || pos.x>850 - 8 || pos.y>850 -8;
   }
 
   void calculateFitness() {
